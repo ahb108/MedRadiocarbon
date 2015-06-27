@@ -244,58 +244,6 @@ Modernizr.load({
         $('#photo-link').html('').append(task.info.image);
         $("#photo-link").attr("href", task.info.link);
         $('#task-id').html(task.id);
-        // Map views always need a projection.  Here we just want to map image
-        // coordinates directly to map coordinates, so we create a projection that uses
-        // the image extent in pixels.
-        var extent = [0, 0, 4000, 6016];
-        var projection = new ol.proj.Projection({
-          code: '',
-          units: 'pixels',
-          extent: extent
-        });
-
-        var map = new ol.Map({
-          controls: ol.control.defaults().extend([
-            new ol.control.ZoomSlider(),
-            new ol.control.FullScreen()
-          ]),
-          layers: [
-            new ol.layer.Image({
-              source: new ol.source.ImageStatic({
-                attributions: [
-                  new ol.Attribution({
-                    html: '&copy; The Trustees of the British Museum'
-                  })
-                ],
-                url: task.info.url_b,
-                projection: projection,
-                imageExtent: extent
-              })
-            })
-          ],
-          target: 'map',
-          view: new ol.View({
-            projection: projection,
-            center: [1800, 5016],
-            //ol.extent.getCenter(extent),
-            zoom: 3,
-            minZoom: 1,
-            maxZoom: 5
-          })
-
-        });
-
-        $('.ol-zoom-in, .ol-zoom-out').tooltip({
-            placement: 'right'
-        });
-
-        $('.ol-full-screen').tooltip({
-            placement: 'left'
-        });
-
-        $('.ol-rotate-reset, .ol-attribution button[title]').tooltip({
-            placement: 'left'
-        });
                 var data = [[]];
                 var config = {
                 data: data,
