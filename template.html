@@ -132,18 +132,9 @@
     </div>
     <!-- The transcribe section using html table -->
     <div class="row">
-        <h4>Transcribe the catalogue into this table</h4>
-        <div id="wgsTranscribe" class="handsontable"></div>
-        <button class="btn btn-success btn-answer" value='Yes'>Submit the transcription</button>
-        <!-- Feedback items for the user -->
-        <p>You are working now on task: <span id="task-id" class="label label-warning">#</span></p>
-        <p>You have completed: <span id="done" class="label label-info"></span> tasks from
-            <!-- Progress bar for the user -->
-            <span id="total" class="label label-inverse"></span></p>
-        <div class="progress progress-striped">
-            <div id="progress" rel="tooltip" title="#" class="progress-bar" role="progressbar" style="width: 0%;"></div>
-        </div>
-        <!-- End of feedback row -->
+        <h4>Please check here to ensure your dates are not already in our archive. If they are not enter the new ones below:</h4>
+        <div id="addMedDates" class="handsontable"></div>
+        <button class="btn btn-success btn-answer" value='Yes'>Submit your dates</button>
     </div>
     <!-- End of the transcribe section -->
 </div>
@@ -369,7 +360,7 @@ Modernizr.load({
                 contextMenu: ['row_below', 'remove_row', 'undo', 'redo'],
                 stretchH: 'all'
                 };
-                $("#wgsTranscribe").handsontable(config);
+                $("#addMedDates").handsontable(config);
 
 
                 $('.btn-answer').off('click').on('click', function(evt) {
@@ -378,7 +369,7 @@ Modernizr.load({
                 if (typeof answer != 'undefined') {
                     task.answer = $("#transcription").serializeJSON();
                     console.log(task.answer);
-                    var handsontable = $("#wgsTranscribe").data('handsontable');
+                    var handsontable = $("#addMedDates").data('handsontable');
                     var data = handsontable.getData();
                     console.log(data);
                     task.answer = data;
@@ -424,7 +415,7 @@ Modernizr.load({
     .ol-rotate {
     top: 3em;
     }
-    #wgsTranscribe {
+    #addMedDates {
     width: 100%;
     }
     .btn-answer {
