@@ -62,16 +62,13 @@
     task.
 -->
 <div class="row skeleton" id="transcription">
-    <!-- The image map column -->
+    <!-- Start of Photo DIV (column) -->
     <div class="row">
-        <div id="map"></div>
-    </div>
-    <div class="col-md-6"><!-- Start of Photo DIV (column) -->
         <a id="photo-link" href="#">
             <img id="photo" src="http://i.imgur.com/GeHxzb7.png" style="max-width=100%">
         </a>
-    </div><!-- End of Photo DIV (columnt) -->
-    <!-- End of image map column -->
+    </div>
+    <!-- End of Photo DIV (columnt) -->
     <div class="row">
         <div class="btn-group">
             <button class="btn btn-info btn-xs" data-toggle="modal" data-target="#myModal"><i
@@ -82,13 +79,13 @@
                     class="glyphicon glyphicon-book"></i> Community Help</a>
         </div>
     </div>
-    <!-- The transcribe section using html table -->
+    <!-- The dataentry section using html table -->
     <div class="row">
         <h4>Please check here to ensure your dates are not already in our archive. If they are not, add new ones below:</h4>
         <div id="addMedDates" class="handsontable"></div>
         <button class="btn btn-success btn-answer" value='Yes'>Submit your dates</button>
     </div>
-    <!-- End of the transcribe section -->
+    <!-- End of the dataentry section -->
 </div>
 <!-- End of DOM Skeleton row -->
 
@@ -332,7 +329,6 @@ Modernizr.load({
                         $("html, body").animate({ scrollTop: 0 }, "slow");
                         $("#success").fadeIn(500).fadeOut(500);
                         $("#loading").fadeIn(500).fadeOut(500);
-                        map.setTarget(null);
                         deferred.resolve();
                     });
                 } else {
@@ -350,25 +346,6 @@ Modernizr.load({
     </script>
 
 <style type="text/css">
-    #map {
-    background-color: black;
-    height: 300px;
-    }
-    #map:-moz-full-screen {
-    height: 100%;
-    }
-    #map:-webkit-full-screen {
-    height: 100%;
-    }
-    #map:-ms-fullscreen {
-    height: 100%;
-    }
-    #map:full-screen {
-    height: 100%;
-    }
-    .ol-rotate {
-    top: 3em;
-    }
     #addMedDates {
     width: 100%;
     }
