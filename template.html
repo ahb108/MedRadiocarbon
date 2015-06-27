@@ -61,7 +61,7 @@
     It uses the class="skeleton" to identify the elements that belong to the
     task.
 -->
-<div class="row skeleton" id="transcription">
+<div class="row skeleton" id="dataentry">
     <!-- Start of Photo DIV (column) -->
     <div class="row">
         <a id="photo-link" href="#">
@@ -251,7 +251,7 @@ Modernizr.load({
                 minCols: 7,
                 minSpareRows: 1,
                 minSpareCols: 0,
-                maxRows: 20,
+                maxRows: 100,
                 autoWrapRow: true,
                 autoWrapCol: true,
                 autoColumnSize: true,
@@ -266,7 +266,7 @@ Modernizr.load({
                 evt.preventDefault();
                 var answer = $(evt.target).attr("value");
                 if (typeof answer != 'undefined') {
-                    task.answer = $("#transcription").serializeJSON();
+                    task.answer = $("#dataentry").serializeJSON();
                     console.log(task.answer);
                     var handsontable = $("#addMedDates").data('handsontable');
                     var data = handsontable.getData();
