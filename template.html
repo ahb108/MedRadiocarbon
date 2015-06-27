@@ -66,6 +66,11 @@
     <div class="row">
         <div id="map"></div>
     </div>
+    <div class="col-md-6"><!-- Start of Photo DIV (column) -->
+        <a id="photo-link" href="#">
+            <img id="photo" src="http://i.imgur.com/GeHxzb7.png" style="max-width=100%">
+        </a>
+    </div><!-- End of Photo DIV (columnt) -->
     <!-- End of image map column -->
     <div class="row">
         <div class="btn-group">
@@ -219,7 +224,15 @@ Modernizr.load({
     pybossa.taskLoaded(function(task, deferred) {
         if ( ! $.isEmptyObject(task) ) {
             loadUserProgress();
+        	var img = $('<img />');
+        	img.load(function() {
+            // continue as soon as the image is loaded
             deferred.resolve(task);
+        });
+        img.attr('src', task.info.url_b).css('height', 460);
+        img.addClass('img-thumbnail img-responsive');
+        task.info.image = img;
+            // deferred.resolve(task);
         } else {
             deferred.resolve(task);
         }
@@ -231,6 +244,8 @@ Modernizr.load({
     pybossa.presentTask(function(task, deferred) {
         if ( !$.isEmptyObject(task) ) {
         $("#question").html(task.info.question);
+        $('#photo-link').html('').append(task.info.image);
+        $("#photo-link").attr("href", task.info.link);
         $('#task-id').html(task.id);
         // Map views always need a projection.  Here we just want to map image
         // coordinates directly to map coordinates, so we create a projection that uses
