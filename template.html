@@ -266,7 +266,7 @@ Modernizr.load({
 <!-- Load user progress -->
 <script>
     function loadUserProgress() {
-        pybossa.userProgress('wgsPart4').done(function(data){
+        pybossa.userProgress('MedRadiocarbon').done(function(data){
             console.log(data);
             console.log("Total answers done for user: " + data.done);
             if ((data.done == 1) && ($.cookie('surveyWGSPart4') == undefined)){
@@ -401,7 +401,7 @@ Modernizr.load({
             $("#finish").fadeIn(500);
         }
     });
-    pybossa.run('wgsPart4');
+    pybossa.run('MedRadiocarbon');
     </script>
 
 <style type="text/css">
