@@ -1,7 +1,7 @@
 {
     "name": "Mediterranean Radiocarbon Dates",
     "short_name": "MedRadiocarbon",
-    "thumbnail": "http://micropasts-other.s3.amazonaws.com/other/med_thumb.jpg",
+    "thumbnail": "http://micropasts-other.s3.amazonaws.com/other/med_thumb.png",
     "description": "Sharing radiocarbon dates across the Mediterranean region",
     "question": "Help us create an open archive of existing Mediterranean radiocarbon dates"
 }
