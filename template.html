@@ -94,57 +94,57 @@
         <div class="modal-content">
             <!-- Modal header -->
             <div class="modal-header">
-                <h3>Transcribing the Worthington Smith notebooks</h3>
-
+                <h3>Tutorial: submitting Mediterranean radiocarbon dates</h3>
             </div>
 
             <!-- Step 1 of the tutorial -->
             <div id="0" class="modal-body" style="display:none">
-                <p>This application is very simple and is a transcription based exercise. Our team would like you to
-                write down exactly what you see on each line of the notepad into the table displayed below the zooming image.</p>
+                <p>This crowdsourcing project is a very simple data-checking and data-entry exercise. We expect it
+                	will most suitable for, and of interest to, Mediterranean archaeologists 
+                	who are familiar with the typical format of radiocarbon dates, and have taken such radiocarbon samples as part of their fieldwork, 
+                	have already collated date lists of their own which they are willing to contribute and/or are willing to check for dates mentioned 
+                	in existing publications.</p>
 
-                <p>Each entry in the note book is similar, 7 fields:</p>
-                <ul class="list-group">
-                    <li>Entry number</li>
-                    <li>Date of discovery</li>
-                    <li>Description of the discovery</li>
-                    <li>Length in inches</li>
-                    <li>Width in inches</li>
-                    <li>Weight in pounds</li>
-                    <li>Weight in ounces</li>
-                </ul>
+                <p>Note that because this application is open ended so it will always be seen as "0% complete". When you agree contribute, 
+                	you will be presented with a spreadsheet and a series of pref-defined column headings that are familiar data fields associated 
+                	with radiocarbon samples. Although it is perfectly feasible to type all entries directly into this online spreasheet, we suggest 
+                	that contributors may wish to create the same  column headings in an on offline spreadsheet first, 
+                	do their data entry there, and then paste the result into the online form.</p>
             </div>
 
             <!-- Step 2 of the tutorial -->
             <div id="1" class="modal-body" style="display:none">
                 <p>
-                    The image that we would like you to transcribe for us, starts at the top of the page and can be scrolled
-                    up and down, and zoomed in and out to read more of the contents. We hope that this interface allows you to
-                    work on the image concurrently with the text table below the image container.
+                    The first thing to do before entering any dates is to download our existing date listing and check that the dates you propose to enter are
+                    not already present. Below is a brief explanation of each of the data fields and any further information about data entry to bear in mind:
                 </p>
-
+ 				<ol>
+                    <li>SampleID -- The code used to uniquely identify a sample by the radiocarbon lab.</li>
+                    <li>CRA -- The conventional uncalibrated radiocarbon age Before Present.</li>
+                    <li>Error -- The error (to one standard deviation) in the measured uncalibrated age of this sample.</li>
+                    <li>DC13 -- A measure of isotopic fractionation of stable isotopes carbon-13 versus carbon-12.</li>
+                    <li>SampleType -- The kind of sample. Examples of standard terms include "bone", "charcoal", "seed" or "pollen". Feel free to add a species 
+                    	name in brackets where appripriate, but otherwise prferably add any further details in Comments data field.</li>
+                    <li>Site -- The archaeological site from which the sample was taken.</li>
+                    <li>SitePhase -- Any information about the stratigraphic phase within the site from which the sample was taken.</li>
+                    <li>Country -- the country to which the site belongs (preferably as a <a href="https://countrycode.org/">three-letter ISO code</a>)</li>
+                    <li>Lon -- Longitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
+                    <li>Lat -- Latitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
+                    <li>GeoQual -- An estimate of the absolute accuracy of your stated longitude and latitude. Please put 'A' (no quotes) for locations derived from 
+                    	GPS or a very fine fix from a satellite image which you think is within ca.10m or so of the correct spot. Use 'B' if you think the location 
+                    	is within the nearest kilometre of the correct spot and 'C' if you think your coordinates are coarser than this. 
+                    	Leave blank if you have left Lon and Lat blank.</li>
+                    <li>Source -- Please say where your dates come from. For example, cite a specific publication or an existing database, or note that the sample is one your took personally. 
+                    	In addition to this information, we will be automatically adding the name of the registered crowdsourcing contributor here at a later stage 
+                    	(based on the details you provided when you registered on the site), but if you wish this credit to be something else, then add it here as 'ContributedBy: '.</li>
+                    <li>Comments -- Please add any other comments about this date in this field. IMPORTANT: if the date you are entering is a proposed correction to an existing date in our 
+                    	listing, then please include the word 'Correction' (no quotes) here.</li>
+                </ol>
                 <p>
-                    The table starts off with just 6 rows but will add another automatically when you get to the bottom, up
-                    to a maximum of 20 rows.
-                </p>
-
-                <p>
-                    The image is contained within an interface that allows you to zoom in and out, and even go full screen.
-                    Try the controls out, you won't break anything!
-                </p>
-            </div>
-
-            <!-- Step 2 of the tutorial -->
-            <div id="2" class="modal-body" style="display:none">
-                <p>
-                    As in the Bronze Age index transcription applications, some abbreviations are used. If you see the sign in the image below, it means 'ditto'.
-                    So please enter the same as the previous line's entry.
-                </p>
-                <img src="http://micropasts.org/wp-content/uploads/2015/03/MicroPasts-·-Project-Transcribing-the-Worthington-George-Smith-catalogue-·-Contribute.png">
-                <p>
-                    As this is an antiquarian notebook, the measurements are not metric and are in imperial measures. When transcribing, do not
-                    attempt to convert the weights or dimensions. Instead please just enter as seen. If you see 3 1/4, then please enter as such.
-                    The project team will do the conversions.
+                    The online table that you will see starts off with just 6 rows but more will be added automatically when you get to the bottom or if you paste in multipe rows. Note that there is 
+                    maximum of 100 rows. If you have more dates than this please submit them in batches of 100. Where we have mentioned a preferred format for each data field above, the choice is yours about how much time you can invest in reformatting your dates before submission: we will accept and attempt to reformat alternatives. 
+                    For example, if you have geographic coordinates for your dates but they are not Lat/Lon-WGS84, then feel free to include them, and make a note in the comments. If you are missing certain information (e.g. Lat and Lon) then you can 
+                    leave that particular cell blank and we will try to create these later, but please make sure that SampleID, AgeUncal, ErrorP and Site and DataSource are present for all entries.
                 </p>
             </div>
             <!-- End of stepped modal body -->
@@ -247,14 +247,14 @@ Modernizr.load({
                 var config = {
                 data: data,
                 minRows: 6,
-                minCols: 10,
+                minCols: 13,
                 minSpareRows: 1,
                 minSpareCols: 0,
                 maxRows: 100,
                 autoWrapRow: true,
                 autoWrapCol: true,
                 autoColumnSize: true,
-                colHeaders: ['SampleID', 'AgeUnCal', 'ErrorP', 'DC13', 'Site', 'SitePhase', 'LonDD', 'LatDD', 'DataSource', 'Comments'],
+                colHeaders: ['SampleID', 'AgeUncal', 'Error', 'DC13', 'SampleType', 'Site', 'SitePhase', 'Country', 'Lon', 'Lat', 'LocQual', 'Source', 'Comments'],
                 contextMenu: ['row_below', 'remove_row', 'undo', 'redo'],
                 stretchH: 'all'
                 };
