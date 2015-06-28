@@ -27,7 +27,7 @@
                     The first thing to do before entering any dates is to download our existing date listing and check that the dates you propose to enter are
                     not already present. Below is a brief explanation of each of the data fields and any further information about data entry to bear in mind:
                 </p>
- 				<ol>
+ 				<ul>
                     <li>SampleID -- The code used to uniquely identify a sample by the radiocarbon lab.</li>
                     <li>CRA -- The conventional uncalibrated radiocarbon age Before Present.</li>
                     <li>Error -- The error (to one standard deviation) in the measured uncalibrated age of this sample.</li>
@@ -48,8 +48,11 @@
                     	(based on the details you provided when you registered on the site), but if you wish this credit to be something else, then add it here as 'ContributedBy: '.</li>
                     <li>Comments -- Please add any other comments about this date in this field. IMPORTANT: if the date you are entering is a proposed correction to an existing date in our 
                     	listing, then please include the word 'Correction' (no quotes) here.</li>
-                </ol>
-                <p>
+                </ul>
+            </div>
+            <!-- Step 3 of the tutorial -->
+            <div id="1" class="modal-body" style="display:none">
+            	<p>
                     The online table that you will see starts off with just 6 rows but more will be added automatically when you get to the bottom or if you paste in multipe rows. Note that there is 
                     maximum of 100 rows. If you have more dates than this please submit them in batches of 100. If you are missing certain information (e.g. Lat and Lon) then you can 
                     leave that particular cell blank and we will try to create these later, but please make sure that SampleID, AgeUncal, ErrorP and Site and DataSource are present for all entries.
@@ -86,7 +89,7 @@
             $("#prevBtn").show();
         }
 
-        if (step == 1 ) {
+        if (step == 2 ) {
             $("#nextBtn").hide();
             $("#startContrib").show();
         }
