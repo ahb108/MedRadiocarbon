@@ -124,13 +124,13 @@
                     <li>Error -- The error (to one standard deviation) in the measured uncalibrated age of this sample.</li>
                     <li>DC13 -- A measure of isotopic fractionation of stable isotopes carbon-13 versus carbon-12.</li>
                     <li>SampleType -- The kind of sample. Examples of standard terms include "bone", "charcoal", "seed" or "pollen". Feel free to add a species 
-                    	name in brackets where appripriate, but otherwise prferably add any further details in Comments data field.</li>
+                    	name in brackets where appripriate, but otherwise preferably add any further details in Comments data field.</li>
                     <li>Site -- The archaeological site from which the sample was taken.</li>
                     <li>SitePhase -- Any information about the stratigraphic phase within the site from which the sample was taken.</li>
                     <li>Country -- the country to which the site belongs (preferably as a <a href="https://countrycode.org/">three-letter ISO code</a>)</li>
-                    <li>Lon -- Longitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
-                    <li>Lat -- Latitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
-                    <li>GeoQual -- An estimate of the absolute accuracy of your stated longitude and latitude. Please put 'A' (no quotes) for locations derived from 
+                    <li>Longitude -- Longitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
+                    <li>Latitude -- Latitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
+                    <li>LocQual -- An estimate of the absolute accuracy of your stated longitude and latitude. Please put 'A' (no quotes) for locations derived from 
                     	GPS or a very fine fix from a satellite image which you think is within ca.10m or so of the correct spot. Use 'B' if you think the location 
                     	is within the nearest kilometre of the correct spot and 'C' if you think your coordinates are coarser than this. 
                     	Leave blank if you have left Lon and Lat blank.</li>
@@ -255,7 +255,7 @@ Modernizr.load({
                 autoWrapRow: true,
                 autoWrapCol: true,
                 autoColumnSize: true,
-                colHeaders: ['SampleID', 'CRA', 'Error', 'DC13', 'SampleType', 'Site', 'SitePhase', 'Country', 'Lon', 'Lat', 'LocQual', 'Source', 'Comments'],
+                colHeaders: ['SampleID', 'CRA', 'Error', 'DC13', 'SampleType', 'Site', 'SitePhase', 'Country', 'Longitude', 'Latitude', 'LocQual', 'Source', 'Comments'],
                 contextMenu: ['row_below', 'remove_row', 'undo', 'redo'],
                 stretchH: 'all'
                 };
