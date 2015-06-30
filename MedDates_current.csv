@@ -1,4 +1,4 @@
-SampleID,CRA,Error,DC13,SampleType,Site,SitePhase,Country,Longitude,Latitude,LocQual,Source,Comments
+SampleID,CRA,Error,DC13,Material,Site,Phase,Country,Longitude,Latitude,LocQual,Source,Comments
 BETA-248595,920,40,-24.7,soil,"Galaniana, Antikythera",,GRC,23.30480594,35.85807626,A,Bevan et al. 2013. Human Ecology 41. Entered by: Andrew Bevan.,Soil profile from agricultural terrace. Sample size of ca.382g.
 BETA-248596,520,40,-24.8,soil,"Galaniana, Antikythera",,GRC,23.30480594,35.85807626,A,Bevan et al. 2013. Human Ecology 41. Entered by: Andrew Bevan.,Soil profile from agricultural terrace. Sample size of ca.268g.
 BETA-248597,430,40,-24.8,soil,"Skariana, Antikythera",,GRC,23.28984856,35.86506873,A,Bevan et al. 2013. Human Ecology 41. Entered by: Andrew Bevan.,Soil profile from agricultural terrace. Sample size of ca.348g.
