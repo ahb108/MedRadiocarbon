@@ -127,6 +127,8 @@
                     <li>Species -- Where appropriate, add th species of the material form which the sample was taken (e.g. "Triticum")</li>
                     <li>Site -- The archaeological site from which the sample was taken.</li>
                     <li>Phase -- Any information about the stratigraphic phase within the site from which the sample was taken.</li>
+                    <li>Type -- The kind of archaeological site or large-scale context from which the sample was taken (we are not enforcing terms, 
+                    	but typical examples might be "settlement", "burial", "terrace", "cave", etc.).</li>
                     <li>Country -- the country to which the site belongs (preferably as a <a href="https://countrycode.org/">three-letter ISO code</a>)</li>
                     <li>Longitude -- Longitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
                     <li>Latitude -- Latitude (preferably in decimal degrees with reference to a WGS84 datum)</li>
@@ -146,7 +148,7 @@
             	<p>
                     The online table that you will see starts off with just 6 rows but more will be added automatically when you get to the bottom or if you paste in multipe rows. Note that there is 
                     maximum of 100 rows. If you have more dates than this please submit them in batches of 100. If you are missing certain information (e.g. Lat and Lon) then you can 
-                    leave that particular cell blank and we will try to create these later, but please make sure that SampleID, AgeUncal, ErrorP and Site and DataSource are present for all entries.
+                    leave that particular cell blank and we will try to create these later, but please make sure that SampleID, CRA, Error and Site and Source are present for all entries.
                 </p>
             </div>
             <!-- End of stepped modal body -->
@@ -248,14 +250,14 @@ Modernizr.load({
                 var config = {
                 data: data,
                 minRows: 6,
-                minCols: 13,
+                minCols: 15,
                 minSpareRows: 1,
                 minSpareCols: 0,
                 maxRows: 100,
                 autoWrapRow: true,
                 autoWrapCol: true,
                 autoColumnSize: true,
-                colHeaders: ['SampleID', 'CRA', 'Error', 'DC13', 'Material', 'Species', 'Site', 'Phase', 'Country', 'Longitude', 'Latitude', 'LocQual', 'Source', 'Comments'],
+                colHeaders: ['SampleID', 'CRA', 'Error', 'DC13', 'Material', 'Species', 'Site', 'Phase', 'Type', 'Country', 'Longitude', 'Latitude', 'LocQual', 'Source', 'Comments'],
                 contextMenu: ['row_below', 'remove_row', 'undo', 'redo'],
                 stretchH: 'all'
                 };
